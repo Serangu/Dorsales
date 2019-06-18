@@ -1,0 +1,74 @@
+
+	Módulo PROGRAMACIÓN CICLO D.A.M. - IES POETA PACO MOLLA - PETRER, 8 DE MARZO DE 2019
+
+
+		EXAMEN CORRESPONDIENTE AL CAPÍTULO 5 DEL LIBRO
+		
+		
+		
+
+	NOMBRE:
+
+
+
+
+
+
+  PRIMERA PARTE (SIN ORDENADOR):
+  ==============================
+
+	1. Dado el siguiente código:
+
+        class Base
+        {
+            protected int dato;
+
+            public void cambiaDato(int n) { dato = n; }
+        }
+
+        class Derivada extends Base
+        {
+            public void cambiaDato(int n) { dato = 2*n; }
+        }
+
+        Si, en un programa, hicieras:
+
+            Base ref = new Derivada();
+            ref.cambiaDato(5);
+
+    ¿tendrías algún error que corregir? Explícalo. ¿Qué valor final tendría el atributo dato?
+    ¿Qué cambiaría si comentáramos o elimináramos el método cambiaDato en la clase Base?
+
+
+	2. Explica con claridad, puedes ayudarte de ejemplos, qué limitación supone la palabra reservada "final" aplicada a:
+
+        a) la referencia de un objeto (instancia de una clase)
+        b) un método de clase
+        c) una clase
+
+
+
+SEGUNDA PARTE (CON ORDENADOR):
+==============================
+
+    
+	3. Realiza una clase "cadenaTexto" que, trabajando sobre un contenido de texto, incluya un método "cuentaCaracteres" que te permita contar las apariciones de un determinado caracter en el texto (distinguiendo mayúsculas y minúsculas). Por ejemplo:
+
+    cuentaCaracteres('a') sobre el texto "almenara" retornaría un 3, mientras que
+    cuentaCaracteres('s') sobre el texto "sabroso" retornaría 2
+
+Puedes resolverlo haciendo una clase que herede de String, preferentemente, o haciendo una clase que contenga el texto como atributo de tipo String. Razona y justifica, como comentario en el código fuente, la opción elegida. No se pide programa, sólo la clase en un fichero cadenaTexto.java en su versión mínima (un constructor a lo sumo, sin setters/getters).
+    
+
+	4. Este programa ha de hacer uso de un paquete "resolubles" con las siguientes 2 clases e interfaz:
+
+ - una interfaz Resoluble que incluya un método llamado "valor", sin parámetros, que retorne un valor de tipo double.
+ 
+ - una clase Potencia con atributos, de tipo double, base y exponente, que implemente la anterior interfaz (puedes hacer uso de Math.pow(b,e)). Además, incluirá al menos 3 constructores: sin parámetros, con dos parámetros y de copia, así como setters, getters, toString y método potencia(double n), que actualice el exponente del objeto aplicando la fórmula correspondiente a la potencia de una potencia (producto de los exponentes).
+
+ - define la clase Potencia10 que herede de potencia, teniendo en cuenta que su base sea siempre 10. La clase incluirá, al menos, un constructor con un sólo parámetro (el exponente), que inicialice los atributos llamando al constructor de su clase base, y el método valor() sobreescrito para que retorne el valor de la potencia con sólo dos decimales (por redondeo o truncado, como prefieras).
+
+ - pon a prueba las clases anteriores y sus métodos en un programa.
+
+
+	Puntuación: 1.5, 1.5, 2 y 5 puntos, respectivamente.
